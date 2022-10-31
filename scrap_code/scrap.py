@@ -2,14 +2,16 @@ import requests
 import time
 import urllib
 import json
+from datetime import datetime
 
 
-for i in range(1):
+
+for i in range(672): # recover data during 7 days every each 1/4 hour. Start 22-10-2022
     url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
     r = requests.get(url,allow_redirects=True)
-    name = 'data('+ str(i) +').csv';
+    name = 'data('+ str(datetime.now()) +').csv';
     open(name,'wb').write(r.content)
-    time.sleep(1)
+    time.sleep(900)
 
 
 """
@@ -21,3 +23,4 @@ for i in range(1):
     with open(name,"w") as outfile:
         outfile.write(json_object)
 """
+
