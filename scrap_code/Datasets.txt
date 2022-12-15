@@ -1,5 +1,0 @@
-https://www.gti.ssr.upm.es/data/parking-lot-database
-http://cnrpark.it/
-https://www.kaggle.com/datasets/mypapit/klccparking?resource=download
-https://datosabiertos.malaga.eu/dataset/ocupacion-aparcamientos-publicos-municipales/resource/0dcf7abd-26b4-42c8-af19-4992f1ee60c6
-https://datosabiertos.malaga.eu/dataset/ocupacion-aparcamientos-publicos-municipales
