@@ -23,19 +23,18 @@ os.system("git remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occ
 for l in range(12): # recover the data during the 12 months of the year
     for k in range(4): # recover the 4 weeks of the month
         for j in range (7): # recover the data during 7 days
-            for i in range(96): # recover data during 24 hours every 1/4 hour. Start 22-10-2022
+            for i in range(1): # recover data during 24 hours every 1/4 hour. Start 22-10-2022
                 url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
                 r = requests.get(url,allow_redirects=True)
                 name = "results/"+str(datetime.now()) +'.csv';
                 open(name,'wb').write(r.content)
-                # Uploading the results to Github
-                os.system("git add .")
-                commit_name = "git commit -m \"Commit done on:" + str(datetime.now()) + "\""
-                print(commit_name)
-                os.system(commit_name)
-                os.system("git push origin main")
-                time.sleep(900)
-
+                time.sleep(10)
+            # Uploading the results to Github
+            os.system("git add .")
+            commit_name = "git commit -m \"Commit done on:" + str(datetime.now()) + "\""
+            print(commit_name)
+            os.system(commit_name)
+            os.system("git push origin main")
 
 
 # This is just an alternative method for scrapping using the open API.
