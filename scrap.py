@@ -30,11 +30,12 @@ for l in range(12): # recover the data during the 12 months of the year
                 open(name,'wb').write(r.content)
                 # Uploading the results to Github
                 os.system("git add .")
-                commit_name = "git commit -m \"Commit done on:" + str(datetime.now())+"\""
+                commit_name = "git commit -m \"Commit done on:" + str(datetime.now()) + "\""
                 print(commit_name)
                 os.system(commit_name)
                 os.system("git push origin main")
                 time.sleep(900)
+
 
 
 # This is just another method for scrapping.
