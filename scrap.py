@@ -14,17 +14,26 @@ from datetime import datetime
 #https://datosabiertos.malaga.eu/dataset/ocupacion-aparcamientos-publicos-municipales
 #-----------------------------------------------------------------------------
 
+import os
 
+# Initialising Git
+os.system("git init")
+os.system("git remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data.git")
 
-
-# replace by: 336 (for 30 minutes scrapping), 168 (for 30 minutes scrapping)
-for i in range(672): # recover data during 7 days every each 1/4 hour. Start 22-10-2022
-    url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
-    r = requests.get(url,allow_redirects=True)
-    name = 'data('+ str(datetime.now()) +').csv';
-    open(name,'wb').write(r.content)
-    time.sleep(900)
-
+for l in range(12): # recover the data during the 12 months of the year
+    for k in range(4): # recover the 4 weeks of the month
+        for j in range (7): # recover the data during 7 days
+            for i in range(96): # recover data during 24 hours every 1/4 hour. Start 22-10-2022
+                url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
+                r = requests.get(url,allow_redirects=True)
+                name = "results/"+str(datetime.now()) +'.csv';
+                open(name,'wb').write(r.content)
+                # Uploading the results to Github
+                os.system("git add .")
+                commit_name = "git commit -m Commit done on:" + str(datetime.now())
+                os.system(commit_name)
+                os.system("git push origin main")
+                time.sleep(900)
 
 
 # This is just another method for scrapping.
