@@ -18,7 +18,7 @@ import os
 
 # Initialising Git
 os.system("git init")
-os.system("git remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data.git")
+os.system("git remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data_Bot.git")
 
 for l in range(12): # recover the data during the 12 months of the year
     for k in range(4): # recover the 4 weeks of the month
@@ -38,7 +38,7 @@ for l in range(12): # recover the data during the 12 months of the year
 
 
 
-# This is just another method for scrapping.
+# This is just an alternative method for scrapping using the open API.
 """
 for i in range(1):
     url = 'https://datosabiertos.malaga.eu/api/3/action/datastore_search?resource_id=0dcf7abd-26b4-42c8-af19-4992f1ee60c6&limit=100'
