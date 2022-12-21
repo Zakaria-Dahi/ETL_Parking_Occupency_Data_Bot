@@ -36,11 +36,11 @@ for m in range(12): # recover the data during the 12 months of the year
                         pass
                     time.sleep(1)
                 # Uploading the results to Github every one hour
-                os.system("git add .")
+                os.system("git -C ../ add .")
                 commit_name = "git -C ../ commit -m \"Commit done on:" + str(datetime.now()) + "\""
                 print(commit_name)
                 os.system(commit_name)
-                os.system("git push origin main")
+                os.system("git -C ../ push origin main")
 
 
 # This is just an alternative method for scrapping using the open API.
