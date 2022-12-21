@@ -18,8 +18,8 @@ from datetime import datetime
 import os
 
 # Initialising Git
-os.system("git init")
-os.system("git remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data_Bot.git")
+os.system("git -C ../ init")
+os.system("git -C ../ remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data_Bot.git")
 
 
 for m in range(12): # recover the data during the 12 months of the year
@@ -34,10 +34,10 @@ for m in range(12): # recover the data during the 12 months of the year
                         open(name,'wb').write(r.content)
                     except:
                         pass
-                    time.sleep(900)
+                    time.sleep(1)
                 # Uploading the results to Github every one hour
                 os.system("git add .")
-                commit_name = "git commit -m \"Commit done on:" + str(datetime.now()) + "\""
+                commit_name = "git -C ../ commit -m \"Commit done on:" + str(datetime.now()) + "\""
                 print(commit_name)
                 os.system(commit_name)
                 os.system("git push origin main")
