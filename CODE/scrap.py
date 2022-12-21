@@ -27,10 +27,13 @@ for m in range(12): # recover the data during the 12 months of the year
         for k in range (7): # recover the data during 7 days
             for j in range(24): # recover data during 24 hours.
                 for i in range(4): # recover data every 1/4 hour.
-                    url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
-                    r = requests.get(url,allow_redirects=True)
-                    name = "results/"+str(datetime.now()) +'.csv';
-                    open(name,'wb').write(r.content)
+                    try: # to avoid the error of the server not returning anything
+                        url = 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
+                        r = requests.get(url,allow_redirects=True)
+                        name = "../RESULTS/"+str(datetime.now()) +'.csv';
+                        open(name,'wb').write(r.content)
+                    except:
+                        pass
                     time.sleep(900)
                 # Uploading the results to Github every one hour
                 os.system("git add .")
