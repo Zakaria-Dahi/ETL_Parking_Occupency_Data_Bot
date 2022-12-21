@@ -34,7 +34,7 @@ for m in range(12): # recover the data during the 12 months of the year
                         open(name,'wb').write(r.content)
                     except:
                         pass
-                    time.sleep(1)
+                    time.sleep(900)
                 # Uploading the results to Github every one hour
                 os.system("git -C ../ add .")
                 commit_name = "git -C ../ commit -m \"Commit done on:" + str(datetime.now()) + "\""
