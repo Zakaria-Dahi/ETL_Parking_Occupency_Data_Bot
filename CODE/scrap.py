@@ -34,6 +34,8 @@ for m in range(12): # recover the data during the 12 months of the year
                         open(name,'wb').write(r.content)
                     except:
                         pass
+                    message = "Extraction done at: " + str(datetime.now())
+                    print(message)
                     time.sleep(900)
                 # Uploading the results to Github every one hour
                 os.system("git -C ../ add .")
@@ -41,6 +43,8 @@ for m in range(12): # recover the data during the 12 months of the year
                 print(commit_name)
                 os.system(commit_name)
                 os.system("git -C ../ push origin main")
+                message = "Commit done at: " + str(datetime.now())
+                print(message)
 
 
 # This is just an alternative method for scrapping using the open API.
