@@ -36,7 +36,8 @@ for m in range(12): # recover the data during the 12 months of the year
                         pass
                     message = "Extraction done at: " + str(datetime.now())
                     print(message)
-                    time.sleep(900)
+                    #time.sleep(900)
+                    time.sleep(2)
                 # Uploading the results to Github every one hour
                 os.system("git -C ../ add .")
                 commit_name = "git -C ../ commit -m \"Commit done on:" + str(datetime.now()) + "\""
