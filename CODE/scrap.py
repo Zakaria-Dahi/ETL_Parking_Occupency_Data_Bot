@@ -19,7 +19,7 @@ import os
 
 # Initialising Git
 os.system("git -C ../ init")
-os.system("git -C ../ remote set-url origin git@github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data_Bot.git")
+os.system("git -C ../ remote set-url origin git@park.github.com:Zakaria-Dahi/ETL_Parking_Occupency_Data_Bot.git")
 
 
 for m in range(12): # recover the data during the 12 months of the year
