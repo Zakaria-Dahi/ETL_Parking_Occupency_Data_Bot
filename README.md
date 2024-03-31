@@ -1,6 +1,6 @@
 # ETL_Parking_Occupency_Data_Bot
 
-**Programmer:** Zakaria Abdelmoiz DAHI, University of Malaga, Spain. :shipit:
+**Programmer:** Zakaria Abdelmoiz DAHI :shipit:
 
 **About:** This repository contains the ETL pipeline for parking availability data in the city of Malaga, Spain starting from October 2022:
 
