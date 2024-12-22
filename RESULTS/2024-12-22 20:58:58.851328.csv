@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ayuntamiento de Málaga">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+      <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>Aviso: No tiene permiso de acceso</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+
+
+      <!-- Cabecera institucional -->
+      <nav class="navbar shadow-nav">
+            <a class="" href="https://malaga.eu" target="_blank">www.malaga.eu</a>
+            <span class="navbar-text">
+                  <img class="logo" title="Logo Ciudad de Málaga" src="assets/img/logo-header.png" />
+            </span>
+      </nav>
+
+      <!-- MENSAJE 403 - No tiene permiso de Acceso -->
+      <div class="jumbotron bg-primary shadow-sm text-white">
+            <div class="container-fluid">
+                  <div class="row">
+                        <div class="col">
+                              <p class="display-1">:(</p>
+                              <p class="display-4">No tiene permiso de acceso</p>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col">
+                              <p class="lead">El servidor le ha denegado el acceso al recurso solicitado </p>
+                        </div>
+                  </div>
+            </div>
+
+            <!-- Animaciones background -->
+            <div class="animations">
+                  <ul class="elements">
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                  </ul>
+            </div>
+      </div>
+
+
+      <!-- Pie de página para información adicional del proxy: hora y proxy -->
+      <footer class="footer mt-auto py-3">
+            <div class="container d-flex flex-row justify-content-between">
+                  <span class="text-white font-weight-light text-nowrap">22-12-2024 - 20:58:58
+                        &nbsp;</span>
+                  <span class="text-white font-weight-light text-truncate">Proxy Inverso de Internet</span>
+
+            </div>
+      </footer>
+</body>
+<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+
+</html>
